@@ -6,6 +6,7 @@
 #define AOC2021_DAY5_GRID_H
 
 #include <array>
+#include <vector>
 
 class Grid {
 public:
@@ -15,10 +16,8 @@ public:
     int countOverlap();
 
 private:
-    std::array<std::array<int, 10>, 10> grid = {};
-    std::array<int, 10> row = {};
+    std::vector<std::array<int, 1000>> grid = {};
     int count = 0;
 };
-
 
 #endif //AOC2021_DAY5_GRID_H
