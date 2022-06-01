@@ -58,8 +58,11 @@ int main(int argc, const char *argv[])
 
     for (int i = 0; i < lines.size(); i++)
     {
-        std::cout << "Initial: " << x1[i] << ", " << y1[i] << "  Final: " << x2[i] << ", " << y2[i] << std::endl;
+        //std::cout << "Initial: " << x1[i] << ", " << y1[i] << "  Final: " << x2[i] << ", " << y2[i] << std::endl;
+        grid.newLine(x1[i], y1[i], x2[i], y2[i]);
     }
-
+    std::cout << "\n" << std::endl;
+    grid.print();
+    std::cout << "Total Overlapping Points: " << grid.countOverlap() << std::endl;
     return 0;
 }

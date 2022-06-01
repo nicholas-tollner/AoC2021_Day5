@@ -12,11 +12,12 @@ public:
     Grid();
     void newLine(int x1, int y1, int x2, int y2);
     void print();
+    int countOverlap();
 
 private:
     std::array<std::array<int, 10>, 10> grid = {};
-    std::array<std::array<int, 10>, 10> marked = {};
     std::array<int, 10> row = {};
+    int count = 0;
 };
 
 
