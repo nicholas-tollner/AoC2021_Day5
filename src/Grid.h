@@ -13,6 +13,7 @@ public:
     Grid();
     void newLine(int x1, int y1, int x2, int y2);
     void print();
+    void writeToFile(std::ofstream &file);
     int countOverlap();
 
 private:

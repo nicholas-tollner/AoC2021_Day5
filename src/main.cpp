@@ -30,7 +30,6 @@ int main(int argc, const char *argv[])
     while(std::getline(inFile, line))
     {
         lines.push_back(line);
-        std::cout << "Added: " << line << std::endl;
     }
 
     // Process lines from vector<string> to vector<int>
@@ -56,12 +55,13 @@ int main(int argc, const char *argv[])
         y2.push_back(stoi(temp2[1]));
     }
 
-    // Map all coordinate on grid
+    // Map all coordinates on grid
     for (int i = 0; i < lines.size(); i++)
     {
         grid.newLine(x1[i], y1[i], x2[i], y2[i]);
     }
 
     std::cout << "Total Overlapping Points: " << grid.countOverlap() << std::endl;
+
     return 0;
 }
